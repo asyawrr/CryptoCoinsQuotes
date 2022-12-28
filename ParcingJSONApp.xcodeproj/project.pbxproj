@@ -13,6 +13,7 @@
 		92A88637295B5F2600DAE680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A88635295B5F2600DAE680 /* Main.storyboard */; };
 		92A88639295B5F2700DAE680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92A88638295B5F2700DAE680 /* Assets.xcassets */; };
 		92A8863C295B5F2700DAE680 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A8863A295B5F2700DAE680 /* LaunchScreen.storyboard */; };
+		92A88647295B5F9900DAE680 /* CryptoCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A88646295B5F9900DAE680 /* CryptoCoin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		92A88638295B5F2700DAE680 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92A8863B295B5F2700DAE680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92A8863D295B5F2700DAE680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92A88646295B5F9900DAE680 /* CryptoCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCoin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		92A8862E295B5F2600DAE680 /* ParcingJSONApp */ = {
 			isa = PBXGroup;
 			children = (
-				92A8862F295B5F2600DAE680 /* AppDelegate.swift */,
-				92A88631295B5F2600DAE680 /* SceneDelegate.swift */,
-				92A88633295B5F2600DAE680 /* ViewController.swift */,
-				92A88635295B5F2600DAE680 /* Main.storyboard */,
+				92A88645295B5F6400DAE680 /* ViewControllers */,
+				92A88644295B5F4C00DAE680 /* Info Files */,
+				92A88643295B5F3400DAE680 /* Storyboards */,
 				92A88638295B5F2700DAE680 /* Assets.xcassets */,
-				92A8863A295B5F2700DAE680 /* LaunchScreen.storyboard */,
 				92A8863D295B5F2700DAE680 /* Info.plist */,
+				92A88648295CAE8C00DAE680 /* Model */,
 			);
 			path = ParcingJSONApp;
+			sourceTree = "<group>";
+		};
+		92A88643295B5F3400DAE680 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				92A88635295B5F2600DAE680 /* Main.storyboard */,
+				92A8863A295B5F2700DAE680 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		92A88644295B5F4C00DAE680 /* Info Files */ = {
+			isa = PBXGroup;
+			children = (
+				92A8862F295B5F2600DAE680 /* AppDelegate.swift */,
+				92A88631295B5F2600DAE680 /* SceneDelegate.swift */,
+			);
+			path = "Info Files";
+			sourceTree = "<group>";
+		};
+		92A88645295B5F6400DAE680 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				92A88633295B5F2600DAE680 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		92A88648295CAE8C00DAE680 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92A88646295B5F9900DAE680 /* CryptoCoin.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +176,7 @@
 				92A88634295B5F2600DAE680 /* ViewController.swift in Sources */,
 				92A88630295B5F2600DAE680 /* AppDelegate.swift in Sources */,
 				92A88632295B5F2600DAE680 /* SceneDelegate.swift in Sources */,
+				92A88647295B5F9900DAE680 /* CryptoCoin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
