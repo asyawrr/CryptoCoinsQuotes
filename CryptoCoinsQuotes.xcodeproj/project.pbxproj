@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		92A88630295B5F2600DAE680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8862F295B5F2600DAE680 /* AppDelegate.swift */; };
 		92A88632295B5F2600DAE680 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A88631295B5F2600DAE680 /* SceneDelegate.swift */; };
-		92A88634295B5F2600DAE680 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A88633295B5F2600DAE680 /* ViewController.swift */; };
+		92A88634295B5F2600DAE680 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A88633295B5F2600DAE680 /* SelectViewController.swift */; };
 		92A88637295B5F2600DAE680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A88635295B5F2600DAE680 /* Main.storyboard */; };
 		92A88639295B5F2700DAE680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92A88638295B5F2700DAE680 /* Assets.xcassets */; };
 		92A8863C295B5F2700DAE680 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A8863A295B5F2700DAE680 /* LaunchScreen.storyboard */; };
 		92A88647295B5F9900DAE680 /* CryptoCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A88646295B5F9900DAE680 /* CryptoCoin.swift */; };
+		92FCF157296709E7006D09A7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FCF156296709E7006D09A7 /* NetworkManager.swift */; };
+		92FCF15C29672B4F006D09A7 /* CoinInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FCF15B29672B4F006D09A7 /* CoinInfoCollectionViewCell.swift */; };
+		92FCF15E29672B9C006D09A7 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FCF15D29672B9C006D09A7 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		92A8862C295B5F2600DAE680 /* ParcingJSONApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParcingJSONApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A8862C295B5F2600DAE680 /* CryptoCoinsQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCoinsQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A8862F295B5F2600DAE680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A88631295B5F2600DAE680 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		92A88633295B5F2600DAE680 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92A88633295B5F2600DAE680 /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 		92A88636295B5F2600DAE680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92A88638295B5F2700DAE680 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92A8863B295B5F2700DAE680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92A8863D295B5F2700DAE680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92A88646295B5F9900DAE680 /* CryptoCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCoin.swift; sourceTree = "<group>"; };
+		92FCF156296709E7006D09A7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		92FCF15B29672B4F006D09A7 /* CoinInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		92FCF15D29672B9C006D09A7 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +56,7 @@
 		92A8862D295B5F2600DAE680 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				92A8862C295B5F2600DAE680 /* ParcingJSONApp.app */,
+				92A8862C295B5F2600DAE680 /* CryptoCoinsQuotes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,12 +64,12 @@
 		92A8862E295B5F2600DAE680 /* ParcingJSONApp */ = {
 			isa = PBXGroup;
 			children = (
+				92A8863D295B5F2700DAE680 /* Info.plist */,
 				92A88645295B5F6400DAE680 /* ViewControllers */,
 				92A88644295B5F4C00DAE680 /* Info Files */,
 				92A88643295B5F3400DAE680 /* Storyboards */,
-				92A88638295B5F2700DAE680 /* Assets.xcassets */,
-				92A8863D295B5F2700DAE680 /* Info.plist */,
 				92A88648295CAE8C00DAE680 /* Model */,
+				92FCF158296709F5006D09A7 /* Network */,
 			);
 			path = ParcingJSONApp;
 			sourceTree = "<group>";
@@ -73,6 +79,7 @@
 			children = (
 				92A88635295B5F2600DAE680 /* Main.storyboard */,
 				92A8863A295B5F2700DAE680 /* LaunchScreen.storyboard */,
+				92A88638295B5F2700DAE680 /* Assets.xcassets */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -89,7 +96,9 @@
 		92A88645295B5F6400DAE680 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				92A88633295B5F2600DAE680 /* ViewController.swift */,
+				92A88633295B5F2600DAE680 /* SelectViewController.swift */,
+				92FCF15B29672B4F006D09A7 /* CoinInfoCollectionViewCell.swift */,
+				92FCF15D29672B9C006D09A7 /* InfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -102,12 +111,20 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		92FCF158296709F5006D09A7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				92FCF156296709E7006D09A7 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		92A8862B295B5F2600DAE680 /* ParcingJSONApp */ = {
+		92A8862B295B5F2600DAE680 /* CryptoCoinsQuotes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92A88640295B5F2700DAE680 /* Build configuration list for PBXNativeTarget "ParcingJSONApp" */;
+			buildConfigurationList = 92A88640295B5F2700DAE680 /* Build configuration list for PBXNativeTarget "CryptoCoinsQuotes" */;
 			buildPhases = (
 				92A88628295B5F2600DAE680 /* Sources */,
 				92A88629295B5F2600DAE680 /* Frameworks */,
@@ -117,9 +134,9 @@
 			);
 			dependencies = (
 			);
-			name = ParcingJSONApp;
+			name = CryptoCoinsQuotes;
 			productName = ParcingJSONApp;
-			productReference = 92A8862C295B5F2600DAE680 /* ParcingJSONApp.app */;
+			productReference = 92A8862C295B5F2600DAE680 /* CryptoCoinsQuotes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,7 +154,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 92A88627295B5F2600DAE680 /* Build configuration list for PBXProject "ParcingJSONApp" */;
+			buildConfigurationList = 92A88627295B5F2600DAE680 /* Build configuration list for PBXProject "CryptoCoinsQuotes" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -150,7 +167,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				92A8862B295B5F2600DAE680 /* ParcingJSONApp */,
+				92A8862B295B5F2600DAE680 /* CryptoCoinsQuotes */,
 			);
 		};
 /* End PBXProject section */
@@ -173,8 +190,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92A88634295B5F2600DAE680 /* ViewController.swift in Sources */,
+				92FCF15C29672B4F006D09A7 /* CoinInfoCollectionViewCell.swift in Sources */,
+				92A88634295B5F2600DAE680 /* SelectViewController.swift in Sources */,
 				92A88630295B5F2600DAE680 /* AppDelegate.swift in Sources */,
+				92FCF15E29672B9C006D09A7 /* InfoViewController.swift in Sources */,
+				92FCF157296709E7006D09A7 /* NetworkManager.swift in Sources */,
 				92A88632295B5F2600DAE680 /* SceneDelegate.swift in Sources */,
 				92A88647295B5F9900DAE680 /* CryptoCoin.swift in Sources */,
 			);
@@ -321,16 +341,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V63HT7SS5T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ParcingJSONApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -349,16 +370,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V63HT7SS5T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ParcingJSONApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,7 +397,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		92A88627295B5F2600DAE680 /* Build configuration list for PBXProject "ParcingJSONApp" */ = {
+		92A88627295B5F2600DAE680 /* Build configuration list for PBXProject "CryptoCoinsQuotes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92A8863E295B5F2700DAE680 /* Debug */,
@@ -384,7 +406,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92A88640295B5F2700DAE680 /* Build configuration list for PBXNativeTarget "ParcingJSONApp" */ = {
+		92A88640295B5F2700DAE680 /* Build configuration list for PBXNativeTarget "CryptoCoinsQuotes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92A88641295B5F2700DAE680 /* Debug */,

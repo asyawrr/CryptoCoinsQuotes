@@ -9,7 +9,7 @@ import UIKit
 
 let link = "https://api2.binance.com/api/v3/ticker/24hr"
 
-class ViewController: UIViewController {
+class SelectViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController {
+extension SelectViewController {
     private func fetchCryptoCoins() {
         guard let url = URL(string: link) else { return }
         
