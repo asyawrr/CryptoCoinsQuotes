@@ -36,7 +36,7 @@ class NetworkManager {
             do {
                 let decoder = JSONDecoder()
                 let cryptoCoin = try decoder.decode([CryptoCoin].self, from: data)
-                print("Here is result: \n", cryptoCoin)
+//                print("Here is result: \n", cryptoCoin)
                 DispatchQueue.main.async {
                     completion(.success(cryptoCoin))
                 }

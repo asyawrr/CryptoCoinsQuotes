@@ -9,13 +9,17 @@ import UIKit
 
 class InfoViewController: UITableViewController {
     
+    
     // MARK: -public statements
     var coin: CryptoCoin!
+    let coinCases = CryptoCoin.CodingKeys.allCases.map{ $0.stringValue }
     
     // MARK: -overrides methods
     override func viewDidLoad() {
         super.viewDidLoad()
         title = coin.symbol
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 40
     }
 
     // MARK: -override methods
@@ -25,7 +29,7 @@ class InfoViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        CryptoCoin.CodingKeys.allCases.count
+        coinCases.count
     }
 
 
@@ -34,7 +38,8 @@ class InfoViewController: UITableViewController {
         else {
             return UITableViewCell()
         }
-        cell.configure(with: coin)
+        
+        cell.configure(with: coinCases[indexPath.item], coin: coin)
         return cell
     }
    

@@ -108,7 +108,7 @@ extension SelectViewController {
             case .success(let coins):
                 self?.coins = coins
                 self?.autocompleteTableView.reloadData()
-                print(coins)
+//                print(coins)
             case .failure(let error):
                 print(error)
             }

@@ -16,41 +16,34 @@ class CoinInfoTableViewCell: UITableViewCell {
 
     
     // MARK: -public methods
-    func configure(with coin: CryptoCoin) {
-        let coinCases = CryptoCoin.CodingKeys.allCases
-//
-//        for key in coinCases {
-////            print(key)
-//            titleLabel.text = "\(key.stringValue)"
-//            descriptionLabel.text = "\(coin.priceChange)"
-//            print(titleLabel.text, descriptionLabel.text)
-//        }
+    func configure(with cases: String, coin: CryptoCoin) {
         
-        switch CryptoCoin {
-        case .symbol:
+        switch cases {
+        case "symbol":
             titleLabel.text = "symbol"
             descriptionLabel.text = coin.symbol
-        case .count:
+        case "count":
             titleLabel.text = "count"
             descriptionLabel.text = String(coin.count)
-        case .highPrice:
+        case "highPrice":
             titleLabel.text = "high price"
             descriptionLabel.text = coin.highPrice
-        case .lastPrice:
+        case "lastPrice":
             titleLabel.text = "last price"
             descriptionLabel.text = coin.lastPrice
-        case .lowPrice:
+        case "lowPrice":
             titleLabel.text = "low price"
             descriptionLabel.text = coin.lowPrice
-        case .prevClosePrice:
-            titleLabel.text = "previous clode price"
+        case "prevClosePrice":
+            titleLabel.text = "previous close price"
             descriptionLabel.text = coin.prevClosePrice
-        case .priceChangePercent:
+        case "priceChangePercent":
             titleLabel.text = "price change in %"
             descriptionLabel.text = coin.priceChangePercent
-        case .priceChange:
+        default:
             titleLabel.text = "price change"
             descriptionLabel.text = coin.priceChange
         }
+
     }
 }
