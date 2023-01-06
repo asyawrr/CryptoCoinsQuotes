@@ -125,6 +125,9 @@
                                         <constraint firstAttribute="bottom" secondItem="qUW-Ja-IrM" secondAttribute="bottom" id="xVN-O1-vZp"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="qUW-Ja-IrM" id="Kco-sV-Htg"/>
                                     <outlet property="titleLabel" destination="Dhy-dW-nAh" id="TRo-Rm-jbK"/>

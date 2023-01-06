@@ -16,7 +16,7 @@ class SelectViewController: UIViewController, UITableViewDelegate {
     
     // MARK: -private statements
     private var coins: [CryptoCoin] = []
-    var filtredCoins: [String] = []
+    private var filtredCoins: [String] = []
     private var searching = false
     
     // MARK: -overrides methods

@@ -20,6 +20,7 @@ class InfoViewController: UITableViewController {
         title = coin.symbol
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 40
+        
     }
 
     // MARK: -override methods
@@ -42,6 +43,22 @@ class InfoViewController: UITableViewController {
         cell.configure(with: coinCases[indexPath.item], coin: coin)
         return cell
     }
-   
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let dateLabel = UILabel()
+        dateLabel.numberOfLines = 0
+        dateLabel.text = getCurrentTime()
+        dateLabel.textColor = .gray
+        return dateLabel
+        
+    }
 
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    // MARK: -private methods
+    func getCurrentTime() -> String {
+        DateFormatter.localizedString(from: NSDate() as Date, dateStyle: .medium, timeStyle: .short)
+    }
 }

@@ -44,6 +44,6 @@ class CoinInfoTableViewCell: UITableViewCell {
             titleLabel.text = "price change"
             descriptionLabel.text = coin.priceChange
         }
-
     }
+    
 }
