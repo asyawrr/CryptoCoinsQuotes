@@ -78,13 +78,14 @@ extension SelectViewController: UITextFieldDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)
+        let cell = autocompleteTableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)
         
-        var content = cell.defaultContentConfiguration()
- 
-        let coin = coins[indexPath.row].symbol
-        content.text = coin
-        cell.contentConfiguration = content
+//        var content = cell.defaultContentConfiguration()
+        if searching {
+            cell.textLabel?.text = filtredCoins[indexPath.row]
+        } else {
+            cell.textLabel?.text = coins[indexPath.row].symbol
+        }
         return cell
     }
     
