@@ -58,7 +58,7 @@ class InfoViewController: UITableViewController {
     }
     
     // MARK: -private methods
-    func getCurrentTime() -> String {
+    private func getCurrentTime() -> String {
         DateFormatter.localizedString(from: NSDate() as Date, dateStyle: .medium, timeStyle: .short)
     }
 }
