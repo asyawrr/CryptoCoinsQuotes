@@ -57,7 +57,7 @@ class SelectViewController: UIViewController, UITableViewDelegate {
             for coin in coins {
                 if let coinToSearch = searchTextField.text {
                     let range = coin.symbol.range(of: coinToSearch, options: .caseInsensitive, range: nil, locale: nil)
-                    if rang e != nil {
+                    if range != nil {
                         self.filtredCoins.append(coin.symbol)
                     }
                 }

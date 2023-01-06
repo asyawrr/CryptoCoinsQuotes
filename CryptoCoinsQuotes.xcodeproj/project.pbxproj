@@ -48,7 +48,7 @@
 		92A88623295B5F2600DAE680 = {
 			isa = PBXGroup;
 			children = (
-				92A8862E295B5F2600DAE680 /* ParcingJSONApp */,
+				92A8862E295B5F2600DAE680 /* CryptoCoinsQuotes */,
 				92A8862D295B5F2600DAE680 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +61,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		92A8862E295B5F2600DAE680 /* ParcingJSONApp */ = {
+		92A8862E295B5F2600DAE680 /* CryptoCoinsQuotes */ = {
 			isa = PBXGroup;
 			children = (
 				92A8863D295B5F2700DAE680 /* Info.plist */,
@@ -71,7 +71,7 @@
 				92A88648295CAE8C00DAE680 /* Model */,
 				92FCF158296709F5006D09A7 /* Network */,
 			);
-			path = ParcingJSONApp;
+			path = CryptoCoinsQuotes;
 			sourceTree = "<group>";
 		};
 		92A88643295B5F3400DAE680 /* Storyboards */ = {
