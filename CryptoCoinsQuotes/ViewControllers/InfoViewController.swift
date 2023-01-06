@@ -9,17 +9,13 @@ import UIKit
 
 class InfoViewController: UITableViewController {
     
-//    private let coin: CryptoCoin!
+    // MARK: -public statements
+    var coin: CryptoCoin!
     
     // MARK: -overrides methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        title = coin.symbol
     }
 
     // MARK: -override methods
@@ -29,17 +25,16 @@ class InfoViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        8
+        CryptoCoin.CodingKeys.allCases.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "coinCell", for: indexPath) as? CoinInfoTableViewCell
-        else { return UITableViewCell() }
-                
-
-        // Configure the cell...
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "coinInfoCell", for: indexPath) as? CoinInfoTableViewCell
+        else {
+            return UITableViewCell()
+        }
+        cell.configure(with: coin)
         return cell
     }
    

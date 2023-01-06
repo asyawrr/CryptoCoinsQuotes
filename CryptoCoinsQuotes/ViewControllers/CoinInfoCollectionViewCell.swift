@@ -13,20 +13,44 @@ class CoinInfoTableViewCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     
+
+    
     // MARK: -public methods
     func configure(with coin: CryptoCoin) {
-     
-//        titleLabel.text =
-//        descriptionLabel.text =
-//        numberOfLessons.text = "Number of lessons: \(coin.numberOfLessons ?? 0)"
-//        numberOfTests.text = "Number of tests: \(coin.numberOfTests ?? 0)"
+        let coinCases = CryptoCoin.CodingKeys.allCases
+//
+//        for key in coinCases {
+////            print(key)
+//            titleLabel.text = "\(key.stringValue)"
+//            descriptionLabel.text = "\(coin.priceChange)"
+//            print(titleLabel.text, descriptionLabel.text)
+//        }
         
-//        NetworkManager.shared.fetchImage(from: coin.imageUrl) { [weak self] result in
-//            switch result {
-//            case .success(let imageDate):
-//                self?.courseImage.image = UIImage(data: imageDate)
-//            case .failure(let error):
-//                print(error)
-//            }
+        switch CryptoCoin {
+        case .symbol:
+            titleLabel.text = "symbol"
+            descriptionLabel.text = coin.symbol
+        case .count:
+            titleLabel.text = "count"
+            descriptionLabel.text = String(coin.count)
+        case .highPrice:
+            titleLabel.text = "high price"
+            descriptionLabel.text = coin.highPrice
+        case .lastPrice:
+            titleLabel.text = "last price"
+            descriptionLabel.text = coin.lastPrice
+        case .lowPrice:
+            titleLabel.text = "low price"
+            descriptionLabel.text = coin.lowPrice
+        case .prevClosePrice:
+            titleLabel.text = "previous clode price"
+            descriptionLabel.text = coin.prevClosePrice
+        case .priceChangePercent:
+            titleLabel.text = "price change in %"
+            descriptionLabel.text = coin.priceChangePercent
+        case .priceChange:
+            titleLabel.text = "price change"
+            descriptionLabel.text = coin.priceChange
         }
+    }
 }

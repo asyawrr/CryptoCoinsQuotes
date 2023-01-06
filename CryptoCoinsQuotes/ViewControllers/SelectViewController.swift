@@ -35,11 +35,14 @@ class SelectViewController: UIViewController, UITableViewDelegate {
     //MARK: -Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showQuote" {
-            guard let coinVC = segue.destination as? InfoViewController else { return }
-            
+        guard let coinVC = segue.destination as? InfoViewController else { return }
+        for coin in coins {
+            if searchTextField.text == coin.symbol {
+                coinVC.coin = coin
+            }
         }
     }
+
     // MARK: -private methods
     private func configureTableView() {
         autocompleteTableView.delegate = self
@@ -80,7 +83,6 @@ extension SelectViewController: UITextFieldDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = autocompleteTableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)
         
-//        var content = cell.defaultContentConfiguration()
         if searching {
             cell.textLabel?.text = filtredCoins[indexPath.row]
         } else {
@@ -89,19 +91,11 @@ extension SelectViewController: UITextFieldDelegate, UITableViewDataSource {
         return cell
     }
     
-//    func textFieldDidBeginEditing(_ textField: UITextField) {
-//        autocompleteTableView.isHidden = false
-//    }
-    
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        searchTextField.resignFirstResponder()
-//        return true
-//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)
 
-        searchTextField.text = coins[indexPath.row].symbol
+        searchTextField.text = filtredCoins[indexPath.row]
     }
 }
 

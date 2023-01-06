@@ -29,7 +29,7 @@ struct CryptoCoin: Codable {
     let highPrice, lowPrice: String
     let count: Int
 
-    enum CodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey, CaseIterable {
         case symbol
         case priceChange
         case priceChangePercent
@@ -40,3 +40,4 @@ struct CryptoCoin: Codable {
         case count
     }
 }
+
