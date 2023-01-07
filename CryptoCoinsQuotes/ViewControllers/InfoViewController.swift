@@ -10,11 +10,19 @@ import UIKit
 class InfoViewController: UITableViewController {
     
     
-    // MARK: -public statements
+    // MARK: - public statements
     var coin: CryptoCoin!
-    let coinCases = CryptoCoin.CodingKeys.allCases.map{ $0.stringValue }
     
-    // MARK: -overrides methods
+    
+    //MARK: - private statements
+    private let coinCases = CryptoCoin.CodingKeys.allCases
+    private var coinDescription: [String] {
+        [coin.symbol, coin.priceChange, coin.priceChangePercent,
+        coin.prevClosePrice, coin.lowPrice, coin.lastPrice,
+        coin.highPrice, String(coin.count)]
+    }
+    
+    // MARK: - overrides methods
     override func viewDidLoad() {
         super.viewDidLoad()
         title = coin.symbol
@@ -23,11 +31,7 @@ class InfoViewController: UITableViewController {
         
     }
 
-    // MARK: -override methods
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        1
-    }
+    // MARK: - override methods
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         coinCases.count
@@ -39,8 +43,10 @@ class InfoViewController: UITableViewController {
         else {
             return UITableViewCell()
         }
+        let coinCase = coinCases[indexPath.item]
+        let coin = coinDescription[indexPath.item]
         
-        cell.configure(with: coinCases[indexPath.item], coin: coin)
+        cell.configure(with: coinCase, coin: coin)
         return cell
     }
     
@@ -57,7 +63,7 @@ class InfoViewController: UITableViewController {
         return 50
     }
     
-    // MARK: -private methods
+    // MARK: - private methods
     private func getCurrentTime() -> String {
         DateFormatter.localizedString(from: NSDate() as Date, dateStyle: .medium, timeStyle: .short)
     }

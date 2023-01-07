@@ -10,11 +10,11 @@ import UIKit
 
 class SelectViewController: UIViewController, UITableViewDelegate {
 
-    // MARK: -IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet var searchTextField: UITextField!
     @IBOutlet var autocompleteTableView: UITableView!
     
-    // MARK: -private statements
+    // MARK: - private statements
     private var coins: [CryptoCoin] = []
     private var filtredCoins: [String] = []
     private var searching = false
@@ -28,7 +28,7 @@ class SelectViewController: UIViewController, UITableViewDelegate {
         configureTableView()
     }
     
-    // MARK: -IBActions
+    // MARK: - IBActions
     @IBAction func searchButton(_ sender: UIButton) {
         performSegue(withIdentifier: "showQuote", sender: nil)
     }
@@ -43,7 +43,7 @@ class SelectViewController: UIViewController, UITableViewDelegate {
         }
     }
 
-    // MARK: -private methods
+    // MARK: - private methods
     private func configureTableView() {
         autocompleteTableView.delegate = self
         autocompleteTableView.dataSource = self
@@ -74,7 +74,7 @@ class SelectViewController: UIViewController, UITableViewDelegate {
 }
 
 
-// MARK: -extensions
+// MARK: - UITableViewDataSourse
 extension SelectViewController: UITextFieldDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         searching ? filtredCoins.count : 0
@@ -83,18 +83,20 @@ extension SelectViewController: UITextFieldDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = autocompleteTableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)
         
+        var content = cell.defaultContentConfiguration()
+        
         if searching {
-            cell.textLabel?.text = filtredCoins[indexPath.row]
+            content.text = filtredCoins[indexPath.row]
         } else {
-            cell.textLabel?.text = coins[indexPath.row].symbol
+            content.text = coins[indexPath.row].symbol
         }
+        cell.contentConfiguration = content
+        
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)
-
         searchTextField.text = filtredCoins[indexPath.row]
     }
 }

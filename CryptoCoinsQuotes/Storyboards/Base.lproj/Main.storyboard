@@ -109,7 +109,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUW-Ja-IrM">
-                                            <rect key="frame" x="246.5" y="0.0" width="87.5" height="43"/>
+                                            <rect key="frame" x="266.5" y="0.0" width="87.5" height="43"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -118,7 +118,7 @@
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="Dhy-dW-nAh" secondAttribute="bottom" id="2HG-KD-xMr"/>
                                         <constraint firstItem="Dhy-dW-nAh" firstAttribute="leading" secondItem="YJY-UA-sk5" secondAttribute="leadingMargin" id="79a-zD-q3T"/>
-                                        <constraint firstAttribute="trailing" secondItem="qUW-Ja-IrM" secondAttribute="trailing" constant="40" id="BrH-qO-i1Z"/>
+                                        <constraint firstAttribute="trailing" secondItem="qUW-Ja-IrM" secondAttribute="trailing" constant="20" id="BrH-qO-i1Z"/>
                                         <constraint firstItem="Dhy-dW-nAh" firstAttribute="top" secondItem="YJY-UA-sk5" secondAttribute="topMargin" id="W3v-q4-P6A"/>
                                         <constraint firstItem="qUW-Ja-IrM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Dhy-dW-nAh" secondAttribute="trailing" constant="80" id="l4a-Kz-kCf"/>
                                         <constraint firstItem="qUW-Ja-IrM" firstAttribute="top" secondItem="YJY-UA-sk5" secondAttribute="top" id="skD-gP-Xf1"/>
