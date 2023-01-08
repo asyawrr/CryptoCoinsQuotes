@@ -22,16 +22,15 @@ class InfoViewController: UITableViewController {
         coin.highPrice, String(coin.count)]
     }
     
-    // MARK: - overrides methods
+    // MARK: - overrides methods VC life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = coin.symbol
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 40
-        
     }
-
-    // MARK: - override methods
+    
+    // MARK: - overrides methods of class
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         coinCases.count
@@ -67,4 +66,5 @@ class InfoViewController: UITableViewController {
     private func getCurrentTime() -> String {
         DateFormatter.localizedString(from: NSDate() as Date, dateStyle: .medium, timeStyle: .short)
     }
+        
 }

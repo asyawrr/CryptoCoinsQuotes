@@ -28,7 +28,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="fpq-0H-1Yx" kind="show" identifier="showQuote" id="0ua-cr-VgO"/>
+                                    <segue destination="fpq-0H-1Yx" kind="show" identifier="showQuote" id="kB2-Es-AKp"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="searchCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="6" allowsSelectionDuringEditing="YES" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KVz-Tv-xvS">

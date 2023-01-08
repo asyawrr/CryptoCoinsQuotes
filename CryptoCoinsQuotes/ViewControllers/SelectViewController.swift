@@ -18,8 +18,9 @@ class SelectViewController: UIViewController, UITableViewDelegate {
     private var coins: [CryptoCoin] = []
     private var filtredCoins: [String] = []
     private var searching = false
+    private var coinsSymbols: [String] = []
     
-    // MARK: -overrides methods
+    // MARK: - overrides methods
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchCryptoCoins()
@@ -29,17 +30,26 @@ class SelectViewController: UIViewController, UITableViewDelegate {
     }
     
     // MARK: - IBActions
-    @IBAction func searchButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "showQuote", sender: nil)
-    }
+
     //MARK: -Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let coinVC = segue.destination as? InfoViewController else { return }
-        for coin in coins {
-            if searchTextField.text == coin.symbol {
-                coinVC.coin = coin
+        if segue.identifier == "showQuote", coinsSymbols.contains(searchTextField.text ?? "") {
+            guard let coinVC = segue.destination as? InfoViewController else { return }
+
+            for coin in coins {
+                if searchTextField.text == coin.symbol {
+                    coinVC.coin = coin
+                }
             }
+            cleanSearching()
+        } else {
+            cleanSearching()
+            
+            showAlert(with: "Incorrect symbol",
+                      and: "Please, enter correct symbol of quote",
+                      for: searchTextField)
+            return
         }
     }
 
@@ -69,6 +79,13 @@ class SelectViewController: UIViewController, UITableViewDelegate {
             filtredCoins = []
             searching = false
         }
+        autocompleteTableView.reloadData()
+    }
+    
+    private func cleanSearching() {
+        searchTextField.text = ""
+        searching = false
+        filtredCoins.removeAll()
         autocompleteTableView.reloadData()
     }
 }
@@ -101,6 +118,20 @@ extension SelectViewController: UITextFieldDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: - alerts extension
+
+extension SelectViewController {
+    private func showAlert(with title: String, and message: String, for textField: UITextField? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = ""
+        }
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+}
 
 // MARK: - Networking
 extension SelectViewController {
@@ -110,7 +141,8 @@ extension SelectViewController {
             case .success(let coins):
                 self?.coins = coins
                 self?.autocompleteTableView.reloadData()
-//                print(coins)
+                self?.coinsSymbols = coins.map { $0.symbol }
+//                print(coins.map { $0.symbol })
             case .failure(let error):
                 print(error)
             }
