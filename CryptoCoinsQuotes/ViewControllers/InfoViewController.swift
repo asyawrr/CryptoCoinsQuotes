@@ -16,10 +16,10 @@ class InfoViewController: UITableViewController {
     
     //MARK: - private statements
     private let coinCases = CryptoCoin.CodingKeys.allCases
-    private var coinDescription: [String] {
+    private var coinDescription: [String?] {
         [coin.symbol, coin.priceChange, coin.priceChangePercent,
         coin.prevClosePrice, coin.lowPrice, coin.lastPrice,
-        coin.highPrice, String(coin.count)]
+         coin.highPrice, String(coin.count ?? 0)]
     }
     
     // MARK: - overrides methods VC life cycle
@@ -45,7 +45,7 @@ class InfoViewController: UITableViewController {
         let coinCase = coinCases[indexPath.item]
         let coin = coinDescription[indexPath.item]
         
-        cell.configure(with: coinCase, coin: coin)
+        cell.configure(with: coinCase, coin: coin ?? "")
         return cell
     }
     

@@ -69,9 +69,9 @@ class SelectViewController: UIViewController, UITableViewDelegate {
             searching = true
             for coin in coins {
                 if let coinToSearch = searchTextField.text {
-                    let range = coin.symbol.range(of: coinToSearch, options: .caseInsensitive, range: nil, locale: nil)
+                    let range = coin.symbol?.range(of: coinToSearch, options: .caseInsensitive, range: nil, locale: nil)
                     if range != nil {
-                        self.filtredCoins.append(coin.symbol)
+                        self.filtredCoins.append(coin.symbol ?? "")
                     }
                 }
             }
@@ -141,7 +141,7 @@ extension SelectViewController {
             case .success(let coins):
                 self?.coins = coins
                 self?.autocompleteTableView.reloadData()
-                self?.coinsSymbols = coins.map { $0.symbol }
+                self?.coinsSymbols = coins.map { $0.symbol ?? "" }
 //                print(coins.map { $0.symbol })
             case .failure(let error):
                 print(error)
